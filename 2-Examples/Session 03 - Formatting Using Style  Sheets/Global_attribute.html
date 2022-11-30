@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../Base/bootstrap-5.2.1-dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <table class="table table-dark table-striped">
+      <tbody>
+        <tr>
+          <td>class</td>
+          <td>
+            <p>
+              <a id="class" name="class"></a>
+              Thuộc tính class: thiết lập một hoặc nhiều tên lớp cho phần tử.
+              Các lớp này được dùng để CSS, Javascript lựa chọn phần tử. (Xem
+              <a href="/selector-chon-phan-tu-trong-css.html" target="_blank"
+                >Chọn phần tử trong CSS</a
+              >
+              và
+              <a
+                href="/khai-niem-co-ban-dom-javascript.html#chonphantu"
+                target="_blank"
+                >Lựa chọn phần tử trong Javascript</a
+              >). Ví dụ sau, phần tử a có hai class với tên là link1 và link2
+            </p>
+            <pre>
+      &lt;a href="https://xuanthulab.net" class="link1 link2"&gt;HTML&lt;/a&gt;</pre
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>style</td>
+          <td>
+            <a id="style" name="style"></a>
+            <p>
+              Thuộc tính style: Viết mã CSS áp dụng ngay cho phần tử. Ví dụ phần
+              tử P có cỡ chữ 18px (Đây là cách
+              <a
+                href="/css-la-gi-cach-nhung-ma-css-vao-html.html#nhungcss"
+                target="_blank"
+                >nhúng mã CSS</a
+              >
+              dạng inline)
+            </p>
+            <pre>
+      &lt;p style="font-size: 18px"&gt;Inline style sheet&lt;/p&gt;</pre
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>id</td>
+          <td>
+            <a id="id" name="id"></a>
+            <p>
+              Thuộc tính id: Thiết lập một định danh duy nhất cho phần tử HTML.
+              Định danh này để tìm kiếm chọn phần tử trong DOM, cũng như để lựa
+              chọn trong CSS. Ví dụ phần tử p đầu có id là idphantup
+            </p>
+            <pre>&lt;p id="idphantup"&gt;Ví dụ&lt;/p&gt;</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>accesskey</td>
+          <td>
+            <a id="accesskey" name="accesskey"></a>
+            <p>Chỉ ra một phím tắt kích hoạt phần tử.</p>
+            <pre>
+      &lt;a href="https://xuanthulab.net" accesskey="x"&gt;HTML&lt;/a&gt;</pre
+            >
+          </td>
+        </tr>
+
+        <tr>
+          <td>contenteditable</td>
+          <td>
+            <a id="contenteditable" name="contenteditable"></a>
+            <p>
+              Cho biết nội dung trong phần tử có thể soạn thảo biên tập lại hay
+              không. Nếu true thì sẽ xuất hiện box soạn thảo cho phần tử
+            </p>
+            <pre>
+      &lt;p contenteditable="true"&gt;Nội dung này soạn thảo được&lt;/p&gt;</pre
+            >
+          </td>
+        </tr>
+        <tr>
+          <td>data-*</td>
+          <td>
+            <a id="data" name="data"></a>
+            <p>
+              Thuộc tính thiết lập dữ liệu riêng cho phần tử, ký hiệu
+              <code>*</code> là một tên tự đặt. <code>data-*</code> là chuẩn đặt
+              tên thuộc tính dữ liệu dùng cho HTML5, Ví dụ phần tử đó có lưu một
+              dữ liệu tên là abc, thì thuộc tính sẽ là data-abc. Sau này tại
+              phần Javascript có thể đọc dữ liệu này theo tên abc, thông qua
+              dataset của phần tử.
+            </p>
+            <pre>&lt;p data-abc="Đây là dữ liệu riêng"&gt;Ví dụ&lt;/p&gt;</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>draggable</td>
+          <td>
+            <a id="draggable" name="draggable"></a>
+            <p>
+              Thuộc tính draggable: Cho biết phần tử có thể kéo thả không (true,
+              false, auto). Thuộc tính này liên quan đến sử dụng Javascript truy
+              cập API kéo/thả. Xem
+              <a href="/keo-va-tha-trong-html5.html" target="_blank"
+                >Kéo / Thả trong HTML5</a
+              >
+            </p>
+            <pre>&lt;p draggable="true"&gt;Ví dụ&lt;/p&gt;</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>hidden</td>
+          <td>
+            <a id="hidden" name="hidden"></a>
+            <p>
+              Thuộc tính hidden: Khi có thuộc tính này phần tử sẽ ẩn, có thể gán
+              bằng true/false
+            </p>
+            <pre>&lt;p hidden&gt;Ví dụ&lt;/p&gt;</pre>
+          </td>
+        </tr>
+
+        <tr>
+          <td>spellcheck</td>
+          <td>
+            <a id="spellcheck" name="spellcheck"></a>
+            <p>
+              Thuộc tính spellcheck: Cho trình duyệt biết có kiểm tra ngữ pháp
+              phần tử này hay không
+            </p>
+            <pre>&lt;p spellcheck="true"&gt;Có kiểm tra ngữ pháp&lt;/p&gt;</pre>
+          </td>
+        </tr>
+
+        <tr>
+          <td>title</td>
+          <td>
+            <a id="title" name="title"></a>
+            <p>
+              Thuộc tính title: Thông tin thêm về phần tử, ví dụ để chuyệt lên
+              phần tử thì hiện thông tin này - nó là tooltip
+            </p>
+            <pre>&lt;p title="Thông tin thêm"&gt;Đây là đoạn văn&lt;/p&gt;</pre>
+          </td>
+        </tr>
+        <tr>
+          <td>autofocus</td>
+          <td>
+            <a id="autofocus" name="autofocus"></a>
+            <p>
+              Thuộc tính autofocus, để kích hoạt phần tử (đang nhận nhập liệu từ
+              bàn phím), thường dùng với các phần tử input, textarea trong FORM.
+              Xem
+              <a href="/the-form-trong-html.html#khai-niem-form" target="_blank"
+                >HTML Form</a
+              >
+            </p>
+            <pre>&lt;input name="ip" autofocus /&gt;</pre>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script src="../Base/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../Base/bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
+</html>
