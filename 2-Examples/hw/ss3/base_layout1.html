@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        background-color: #ccc;
+        height: 98vh;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+      }
+      header,
+      nav,
+      footer,
+      section,
+      article,
+      aside {
+        height: 50px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+      }
+      .margin__top__5 {
+        margin-top: 5px;
+      }
+      .div__content {
+        display: flex;
+        flex: 1;
+      }
+      .border__solid {
+        border: 1px solid;
+      }
+      .div__left {
+        flex: 0.5;
+        margin-right: 5px;
+      }
+      .div__right {
+        flex: 0.5;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .height__50 {
+        height: 50%;
+      }
+      article {
+        height: 48%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="border__solid">&#60;Header&#62;</header>
+      <nav class="border__solid margin__top__5">&#60;Nav&#62;</nav>
+      <div class="div__content margin__top__5">
+        <div class="div__left">
+          <section class="border__solid height__50">&#60;section&#62;</section>
+          <article class="border__solid margin__top__5">
+            &#60;article&#62;
+          </article>
+        </div>
+        <div class="div__right border__solid">
+          <aside>&#60;aside&#62;</aside>
+        </div>
+      </div>
+      <footer class="border__solid margin__top__5">&#60;Footer&#62;</footer>
+    </div>
+  </body>
+</html>

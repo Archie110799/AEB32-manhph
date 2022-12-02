@@ -64,3 +64,9 @@ Bố cục CSS:
 
 - CSS 4 là phiên bản kế thừa CSS 3 hiện vẫn đang được cập nhật, phát triển
 - Được dự đoán sẽ có rất nhiều phương thức mới được thêm vào như: Mutability, Hyperlink…
+
+
+# Phân cấp mức độ ưu tiên css
+- !important
+- style inline
+- css class, id, tag name

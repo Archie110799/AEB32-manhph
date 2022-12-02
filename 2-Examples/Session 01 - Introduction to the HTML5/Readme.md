@@ -63,7 +63,7 @@ HTML động sử dụng JavaScript và CSS để tạo các trang Web động v
  HTML5 là dự án hợp tác giữa World Wide Web Consortium (W3C) và Web Hypertext Application, trên Web Hypertext Application Technology Working Group (Nhóm Công tác Công nghệ WHATWG).
  Các tính năng mới của HTML5 sẽ bao gồm các thẻ như <canvas>, <ar, cle>, <nav>, <header>, <footer>, <sec, on>, <audio>, <video>, v.v.
  Một số công nghệ được sử dụng cho các trang Web động JavaScript, CSS, XHTML và DHTML.
- Cascading Style Sheet (CSS) là một ngôn ngữ dựa trên quy tắc, chỉ định hướng dẫn về formadng cho nội dung được chỉ định trong trang HTML.
+ Cascading Style Sheet (CSS) là một ngôn ngữ dựa trên quy tắc, chỉ định hướng dẫn về formart cho nội dung được chỉ định trong trang HTML.
  JavaScript là một ngôn ngữ script cho phép bạn xây dựng các trang Web động bằng cách đảm bảo tính tương tác tối đa của người dùng.
  jQuery là một thư viện JavaScript giúp đơn giản hóa việc thiết kế tập lệnh phía máy khách trên các trang HTML.
  Các trình duyệt chính, chẳng hạn như Chrome, Firefox, Opera, Safari, Internet Explorer, v.v., đang cố gắng thêm các tính năng HTML5 mới vào phiên bản mới nhất của trình duyệt.
