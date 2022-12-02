@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div__parrent{
+            height: 100px;
+            display: flex;
+        }
+        .div__left{
+            background-color: red;
+            flex:0.3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .div__right{
+            background-color: #ccc;
+            flex: 0.7;
+            display: flex;
+        }
+        .div__percent{
+            background-color: rgba(255, 0, 0, 0.792);
+            flex: 0.25;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div__parrent">
+        <div class="div__left">BANDWIDTH</div>
+        <div class="div__right">
+            <div class="div__percent">25%</div>
+        </div>
+    </div>
+</body>
+</html>
