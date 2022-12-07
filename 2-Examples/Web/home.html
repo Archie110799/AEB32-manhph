@@ -9,6 +9,11 @@
       rel="stylesheet"
       href="./bootstrap-5.2.1-dist/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
     <style>
       .bg-ccc {
         background-color: #ccc;
@@ -16,7 +21,7 @@
       .col-content {
         /* height: 500px; */
       }
-      img{
+      img {
         width: 400px;
         height: 600px;
         object-fit: contain;
@@ -24,10 +29,14 @@
     </style>
   </head>
   <body>
-    <header class="bg-ccc p-3">
-      <h1>The pulpit rock</h1>
+    <header class="bg__ccc p-3 rounded-3">
+      <div>
+        <a href="./home.html" class="active">Home</a>
+        <a href="./list.html">List</a>
+        <a href="./form.html">Form</a>
+      </div>
     </header>
-    <div class="row mt-3">
+    <div class="row my-3">
       <div class="col-12 col-md-3 col-content">
         <div class="p-4 mx-3 border-bottom">The Drive</div>
         <div class="p-4 mx-3 border-bottom">The Walk</div>
@@ -35,7 +44,7 @@
         <div class="p-4 mx-3 border-bottom">The End</div>
       </div>
       <div class="col-12 col-md col-content">
-        <h1>The Walk</h1>
+        <h1 class="animate__animated animate__rotateOutDownRight">The Walk</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint facere
           at ipsam nisi, quod repellendus facilis suscipit porro adipisci velit
@@ -89,12 +98,6 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-        <!-- <img
-          src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80"
-          alt=""
-          width="300"
-          height="300"
-        /> -->
       </div>
       <div class="col-12 col-md-3 col-content">
         <div>
@@ -113,26 +116,13 @@
         </div>
       </div>
     </div>
-    <footer class="bg-ccc text-center">Footer</footer>
+    <footer
+      class="bg__ccc text-center fixed-bottom rounded-3"
+    >
+      Footer
+    </footer>
     <!-- config js bt -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-    ></script> -->
     <script src="./bootstrap-5.2.1-dist/umd/popper.min.js"></script>
     <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
   </body>
 </html>
-
-<!-- 
-truy cap getbootstrap.com
-click -> docs
-quick start:
-- copy CDN link: 
-+ 1 link css: dan vao phan head
-+ 2 link js: de ngay tren </body>
-- Test bootstrap
-+ Layout -> Grid
-+ copy code 3 column -> dua vao phan body cua trang web
--->
