@@ -10,7 +10,7 @@
       href="./bootstrap-5.2.1-dist/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="./css/common.css" />
-    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/header.css" />
   </head>
   <body>
     <header class="bg__ccc p-3 rounded-3">
@@ -19,27 +19,27 @@
         frameborder="0"
         class="h__55px w-100 rounded-3"
       ></iframe>
-      
     </header>
     <form class="row g-3 w-50 m-auto my-3" onsubmit="return false">
       <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" />
+        <label for="inputName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="inputName" />
       </div>
       <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword4" />
+        <label for="inputCity" class="form-label">City</label>
+        <input type="text" class="form-control" id="inputCity" />
       </div>
       <div class="col-12">
-        <label for="inputAddress" class="form-label">Address</label>
+        <label for="inputAddress" class="form-label">Avatar</label>
         <input
           type="text"
           class="form-control"
-          id="inputAddress"
-          placeholder="1234 Main St"
+          id="inputAvatar"
+          placeholder="https://xxxxxx"
         />
       </div>
-      <div class="col-12">
+      <button class="btn btn-success" onclick="handleSubit()">Submit</button>
+      <!-- <div class="col-12">
         <label for="inputAddress2" class="form-label">Address 2</label>
         <input
           type="text"
@@ -71,7 +71,7 @@
       </div>
       <div class="col-12">
         <button type="submit" class="btn btn-primary" onclick="handleSignin()" >Sign in</button>
-      </div>
+      </div> -->
     </form>
     <footer class="bg__ccc text-center fixed-bottom rounded-3">Footer</footer>
     <!-- config js bt -->
@@ -80,19 +80,32 @@
     <script src="./js/action/user.js"></script>
     <script src="./js/form.js"></script>
     <script>
-      function handleSignin() {
-        let elmInputCity = document.getElementById('inputCity')
-        // input type text, email, password -> quan ly gia tri = value
-        
-        elmInputCity.value = 'Ha Noi' // setValue elm
-        console.log(elmInputCity.value); // getValue elm
+      function handleSubit() {
+        let elmName = document.getElementById("inputName");
+        let elmCity = document.getElementById("inputCity");
+        let elmAvatar = document.getElementById("inputAvatar");
 
-
-        // input type checkbox, radio -> elm.checked
-        handleGetUser()
-
-
+        let user = {
+          name: elmName.value,
+          city: elmCity.value,
+          avatar: elmAvatar.value,
+        };
+        console.log(user);
+        let user_post = 'https://632878a09a053ff9aab8cf03.mockapi.io/api/v1/users'
+        fetch(user_post, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", }, 
+          body: JSON.stringify(user),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
       }
     </script>
   </body>
 </html>
+

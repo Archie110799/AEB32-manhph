@@ -1,17 +1,6 @@
 const URL = "https://632878a09a053ff9aab8cf03.mockapi.io/api/v1/users";
 
-fetch(URL, {
-  method: "GET",
-})
-  .then((response) => response.json())
-  .then((data) => {
-    // console.log(data);
-    // dam bao users no co data
-    _renderUI(data);
-  })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+getListUser();
 
 // (users : Array<object>) => void
 function _renderUI(users) {
@@ -19,11 +8,15 @@ function _renderUI(users) {
 
   function formatRow(user) {
     return `
-    <tr onclick="handleClickRow(${user.id})">
+    <tr>
       <td>${user.id}</td>
       <td>${user.name}</td>
       <td>${user.city}</td>
       <td>${user.avatar}</td>
+      <td>
+        <button class="btn btn-success" onclick="goToDetail(${user.id})">Detail</button>
+        <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
+      </td>
     </tr>
     `;
   }
@@ -37,7 +30,38 @@ function _renderUI(users) {
   elmBody.innerHTML = bodyTable;
 }
 
-function handleClickRow(userId) {
-  console.log("handleClickRow", userId);
+function getListUser() {
+  fetch(URL, {
+    method: "GET",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // console.log(data);
+      // dam bao users no co data
+      _renderUI(data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
+function goToDetail(userId) {
+  console.log("goToDetail", userId);
   window.location.href = `./detail.html?id=${userId}`;
 }
+
+function deleteUser(userId) {
+  console.log("deleteUser");
+  let user_delete = URL + "/" + userId;
+  fetch(user_delete, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      getListUser();
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
