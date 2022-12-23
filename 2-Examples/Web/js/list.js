@@ -15,6 +15,7 @@ function _renderUI(users) {
       <td>${user.avatar}</td>
       <td>
         <button class="btn btn-success" onclick="goToDetail(${user.id})">Detail</button>
+        <button class="btn btn-info" onclick="handleEdit(${user.id})">Edit</button>
         <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
       </td>
     </tr>
@@ -65,3 +66,7 @@ function deleteUser(userId) {
     });
 }
 
+function handleEdit(userId) {
+  console.log("handleEdit", userId);
+  window.location.href = `./form.html?id=${userId}`;
+}

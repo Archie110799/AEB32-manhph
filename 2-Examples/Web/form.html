@@ -79,33 +79,7 @@
     <script src="./bootstrap-5.2.1-dist/js/bootstrap.min.js"></script>
     <script src="./js/action/user.js"></script>
     <script src="./js/form.js"></script>
-    <script>
-      function handleSubit() {
-        let elmName = document.getElementById("inputName");
-        let elmCity = document.getElementById("inputCity");
-        let elmAvatar = document.getElementById("inputAvatar");
 
-        let user = {
-          name: elmName.value,
-          city: elmCity.value,
-          avatar: elmAvatar.value,
-        };
-        console.log(user);
-        let user_post = 'https://632878a09a053ff9aab8cf03.mockapi.io/api/v1/users'
-        fetch(user_post, {
-          method: "POST",
-          headers: { "Content-Type": "application/json", }, 
-          body: JSON.stringify(user),
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-          });
-      }
-    </script>
   </body>
 </html>
 
